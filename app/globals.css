@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1c1815;
+}
+
+.hair {
+  height: 1px;
+  width: 100%;
+  background-color: #e8e1d8;
+  border: none;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8f3e54;
+  font-weight: 600;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1c1815;
+  color: #faf6f1;
+  font-weight: 500;
+  padding: 16px 30px;
+  border-radius: 2px;
+  border: 1px solid #1c1815;
+  transition: background-color 0.15s ease;
+}
+.btn-primary:hover {
+  background-color: #3a332c;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #1c1815;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2px;
+  border: 1px solid #1c1815;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn-outline:hover {
+  background-color: #1c1815;
+  color: #faf6f1;
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #faf6f1;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2px;
+  border: 1px solid #faf6f1;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn-outline-light:hover {
+  background-color: #faf6f1;
+  color: #1c1815;
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #b85c74;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 16px 30px;
+  border-radius: 2px;
+  border: 1px solid #b85c74;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn-accent:hover {
+  background-color: #8f3e54;
+  border-color: #8f3e54;
+}
