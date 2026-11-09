@@ -14,20 +14,15 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  // Ręczny przełącznik na czas premiery: 21.10.2026 zmień na false
-  // (albo podłącz tu porównanie z bieżącą datą, gdy strona pójdzie na produkcję).
+  // W dniu premiery zmień na false (przyciski i ceny przełączą się na „Kup teraz”).
   const [preorderMode] = useState(true);
+  const goToPricing = () =>
+    document.getElementById("wybierz")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <main>
-      <Hero
-        preorderMode={preorderMode}
-        onCtaClick={() =>
-          document.getElementById("wybierz")?.scrollIntoView({ behavior: "smooth" })
-        }
-      />
-      <hr className="hair" />
-      <ProblemSection />
+      <Hero preorderMode={preorderMode} onCtaClick={goToPricing} />
+      <ProblemSection onCtaClick={goToPricing} />
       <AboutBook />
       <ForWhom />
       <Contents />
@@ -35,8 +30,7 @@ export default function Home() {
       <AuthorNote />
       <AboutAuthor />
       <FAQ />
-      <FinalCTA />
-      <hr className="hair" />
+      <FinalCTA preorderMode={preorderMode} />
       <Footer />
     </main>
   );

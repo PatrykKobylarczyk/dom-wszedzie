@@ -2,97 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
+body { background: #fff; color: #111; }
 
-body {
-  background-color: #ffffff;
-  color: #1c1815;
-}
+@layer components {
+  .kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-crimson;
+  }
+  .on-dark .kicker { @apply text-sky; }
 
-.hair {
-  height: 1px;
-  width: 100%;
-  background-color: #e8e1d8;
-  border: none;
-}
-
-.kicker {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #8f3e54;
-  font-weight: 600;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: #1c1815;
-  color: #faf6f1;
-  font-weight: 500;
-  padding: 16px 30px;
-  border-radius: 2px;
-  border: 1px solid #1c1815;
-  transition: background-color 0.15s ease;
-}
-.btn-primary:hover {
-  background-color: #3a332c;
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: transparent;
-  color: #1c1815;
-  font-weight: 500;
-  padding: 15px 28px;
-  border-radius: 2px;
-  border: 1px solid #1c1815;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-.btn-outline:hover {
-  background-color: #1c1815;
-  color: #faf6f1;
-}
-
-.btn-outline-light {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: transparent;
-  color: #faf6f1;
-  font-weight: 500;
-  padding: 15px 28px;
-  border-radius: 2px;
-  border: 1px solid #faf6f1;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-.btn-outline-light:hover {
-  background-color: #faf6f1;
-  color: #1c1815;
-}
-
-.btn-accent {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: #b85c74;
-  color: #ffffff;
-  font-weight: 500;
-  padding: 16px 30px;
-  border-radius: 2px;
-  border: 1px solid #b85c74;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-.btn-accent:hover {
-  background-color: #8f3e54;
-  border-color: #8f3e54;
+  /* Przycisk główny: błękit z okładki. Ciemny tekst, bo biały na tym błękicie ma za mały kontrast. */
+  .btn-sky {
+    @apply inline-flex items-center justify-center gap-3 rounded-sm bg-sky px-8 py-4 text-base font-semibold text-ink transition-colors hover:bg-sky-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky;
+  }
+  .btn-line {
+    @apply inline-flex items-center justify-center gap-3 rounded-sm border border-ink bg-transparent px-8 py-4 text-base font-semibold text-ink transition-colors hover:bg-ink hover:text-white;
+  }
+  .on-dark .btn-line {
+    @apply border-white text-white hover:bg-white hover:text-ink;
+  }
 }

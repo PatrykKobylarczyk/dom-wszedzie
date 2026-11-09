@@ -1,32 +1,24 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.ts"],
   theme: {
     extend: {
       colors: {
         paper: "#FFFFFF",
-        cream: "#FAF6F1",
-        ink: "#1C1815",
-        "ink-soft": "#3E3830",
-        muted: "#6B6459",
-        line: "#E8E1D8",
-        accent: {
-          DEFAULT: "#B85C74",
-          deep: "#8F3E54",
-          soft: "#F4E3E8",
-        },
+        ink: "#111111",
+        "ink-soft": "#3A3A3A",
+        muted: "#6B6B6B",
+        line: "#E6E6E6",
+        // błękit z okładki (przyciski) i karmin z makiety (akcenty tekstowe)
+        sky: { DEFAULT: "#3AA8DD", deep: "#2B93C7" },
+        crimson: { DEFAULT: "#A3224F", soft: "#F6E4EB" },
       },
       fontFamily: {
-        serif: ["var(--font-fraunces)", "Georgia", "Times New Roman", "serif"],
-        sans: ["var(--font-work-sans)", "system-ui", "sans-serif"],
+        script: ["var(--font-script)", "cursive"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
-      maxWidth: {
-        content: "1120px",
-      },
+      maxWidth: { content: "1120px" },
     },
   },
   plugins: [],

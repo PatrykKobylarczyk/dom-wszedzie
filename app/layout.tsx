@@ -1,35 +1,31 @@
 import type { Metadata } from "next";
-import { Fraunces, Work_Sans } from "next/font/google";
+import { Allura, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { PREMIERE_LONG } from "@/lib/config";
 
-const fraunces = Fraunces({
+// Czcionka „pisana ręcznie” w nagłówkach — zmiana na inną to jedna linia tutaj.
+const script = Allura({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  weight: "400",
+  variable: "--font-script",
   display: "swap",
 });
 
-const workSans = Work_Sans({
+const sans = Nunito_Sans({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-work-sans",
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Dom Wszędzie — Danuta Stefankiewicz",
-  description:
-    "Stwórz swój bezpieczny zakątek. Przedsprzedaż e-booka i audiobooka „Dom Wszędzie”. Premiera 21 października 2026.",
+  description: `Stwórz swój bezpieczny zakątek. E-book i audiobook „Dom Wszędzie”. Premiera ${PREMIERE_LONG}.`,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pl" className={`${fraunces.variable} ${workSans.variable}`}>
+    <html lang="pl" className={`${script.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
