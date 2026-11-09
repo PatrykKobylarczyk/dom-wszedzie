@@ -17,13 +17,15 @@ Strona wystartuje pod `http://localhost:3000`.
 - `app/page.tsx` — strona główna, spina wszystkie sekcje w kolejności z briefu.
 - `components/` — jedna sekcja = jeden komponent (Hero, ProblemSection, AboutBook, ForWhom,
   Contents, Pricing, AuthorNote, AboutAuthor, FAQ, FinalCTA, Footer).
-- `app/globals.css` — tokeny kolorów/przyciski jako klasy pomocnicze (`.btn-accent`, `.btn-outline`…).
-- `tailwind.config.ts` — paleta (`ink`, `cream`, `accent`…) i fonty (Fraunces + Work Sans przez `next/font/google`).
+- `lib/config.ts` — **data premiery i ceny** (jedno miejsce; zmiana tu aktualizuje całą stronę).
+- `components/Section.tsx` — sekcje na przemian białe/czarne.
+- `app/globals.css` — przyciski (`.btn-sky` błękit z okładki, `.btn-line`) i `.kicker`.
+- `tailwind.config.ts` — paleta (`ink`, `sky`, `crimson`…) i fonty (Allura — pismo ręczne w nagłówkach, Nunito Sans w tekście; `app/layout.tsx`).
 - `public/book-cover.jpg` — okładka książki użyta w sekcji hero.
 
 ## Co jeszcze do zrobienia przed publikacją
 
-- **Ceny** — wszystkie miejsca z `[cena]` (w `Pricing.tsx` i `FinalCTA.tsx`) trzeba uzupełnić.
+- **Ceny i data** — w `lib/config.ts` (77/77/99 zł w przedsprzedaży, 99/99/129 zł po premierze; premiera 6.12.2026).
 - **Płatności** — przyciski CTA są na razie wizualne, bez integracji (zgodnie z ustaleniami). Do podłączenia:
   Stripe / Przelewy24 / PayU, w zależności od wybranego dostawcy.
 - **Automatyczne potwierdzenie zakupu** — razem z integracją płatności.

@@ -1,42 +1,53 @@
+import Section from "./Section";
+
 export default function AboutAuthor() {
   return (
-    <section className="bg-white px-6 py-20 md:px-16 lg:px-[120px] lg:py-32">
-      <div className="mx-auto flex max-w-content flex-col items-center gap-10 text-center lg:flex-row lg:items-center lg:gap-22 lg:text-left">
-        <div className="flex flex-[0_0_240px] justify-center">
-          <div className="flex h-60 w-60 items-center justify-center rounded-full border border-line bg-accent-soft">
-            <span className="text-center text-xs uppercase tracking-wider text-accent">
-              Zdjęcie
-              <br />
-              autorki
-            </span>
-          </div>
+    <Section tone="dark">
+      <div className="mx-auto flex max-w-content flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-20">
+        <div className="flex h-60 w-60 flex-none items-center justify-center rounded-full border border-white/25 bg-white/[0.06]">
+          <span className="text-center text-xs uppercase tracking-wider text-white/60">
+            Zdjęcie
+            <br />
+            autorki
+          </span>
         </div>
         <div className="max-w-2xl">
           <div className="kicker">O autorce</div>
-          <h2 className="mt-3 mb-6 font-serif text-3xl font-medium text-ink">
-            Danuta Stefankiewicz
-          </h2>
-          <div className="flex flex-col gap-4 text-base leading-relaxed text-ink-soft md:text-lg">
+          <h2 className="mb-6 mt-2 font-script text-6xl text-white">Danuta Stefankiewicz</h2>
+          <div className="flex flex-col gap-4 text-base leading-relaxed text-white/80 md:text-lg">
             <p>
-              Agentka nieruchomości, absolwentka Dziennikarstwa i Komunikacji
-              Społecznej Uniwersytetu Łódzkiego oraz plastyczka.
+              Absolwentka Dziennikarstwa i Komunikacji Społecznej Uniwersytetu Łódzkiego, plastyczka,
+              zawodowo związana wcześniej z „Gazetą Wyborczą” i Onet.pl. Licencjonowana agentka
+              nieruchomości, członkini stowarzyszenia MIESZKANICZNIK. Od 2014 roku działa na rynku
+              nieruchomości, łącząc wiedzę o przestrzeni z uważnością na ludzkie potrzeby i emocje.
             </p>
             <p>
-              Przez lata związana z „Gazetą Wyborczą” i Onet.pl. Od 2014 roku
-              zawodowo związana z rynkiem nieruchomości.
+              Ma przyjemność współtworzyć markę Loft Me by Master House — biuro nieruchomości,
+              sprzedające tylko mieszkania, w których serce bije szybciej. To filozofia bliska jej
+              przekonaniu, że wyjątkowość miejsca nie zawsze wynika z jego metrażu, lokalizacji czy
+              ceny, ale przede wszystkim z emocji, które w nas wywołuje.
             </p>
             <p>
-              Przez ten czas obserwowała nie tylko mieszkania i domy, ale
-              przede wszystkim ludzi stojących przed zmianą: przeprowadzką,
-              sprzedażą, nowym początkiem czy pożegnaniem z ważnym miejscem.
+              Przez lata odwiedziła setki mieszkań i domów, poznając historie ludzi stojących u
+              progu życiowych zmian. Obserwowała, jak miejsca stają się świadkami miłości,
+              dorastania, rozstań, nowych początków i powrotów.
             </p>
-            <p className="italic text-accent-deep">
-              Z tych doświadczeń powstał „Dom Wszędzie” — książka o tym, jak
-              stworzyć swoje miejsce nawet wtedy, gdy życie zmienia adres.
+            <p>
+              To doświadczenie nauczyło ją patrzeć na nieruchomości nie przez pryzmat metrów
+              kwadratowych, ale ludzi, którzy wypełniają je życiem.
+            </p>
+            <p>
+              W swojej pracy łączy wrażliwość estetyczną, umiejętność opowiadania historii i
+              praktyczną wiedzę o tworzeniu przestrzeni.
+            </p>
+            <p className="font-script text-4xl text-sky">
+              Z tej nieoczywistej perspektywy narodził się „Dom Wszędzie” — książka, w której
+              doświadczenie zawodowe spotyka się z refleksją nad tym, co sprawia, że czujemy się
+              bezpieczni, spokojni i naprawdę u siebie.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
